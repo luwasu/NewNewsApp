@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="12.0sp"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/sub_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dim_16"
+        android:paddingRight="@dimen/dim_16">
+
+        <ImageView
+            android:id="@+id/no_data_image"
+            android:layout_width="@dimen/dim_64"
+            android:layout_height="@dimen/dim_64"
+            android:paddingBottom="@dimen/dim_8" />
+
+        <TextView
+            android:id="@+id/no_data_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progression"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+</RelativeLayout>
