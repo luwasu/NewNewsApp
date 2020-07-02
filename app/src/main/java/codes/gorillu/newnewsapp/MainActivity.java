@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
             mEmptyStateTextView.setText(R.string.no_news);
-            mEmptyStateImageView.setImageResource(R.drawable.ic_news);
+            mEmptyStateImageView.setImageResource(R.drawable.ic_error);
 
         } else {
             mEmptyStateImageView.setImageResource(R.drawable.ic_domain);
