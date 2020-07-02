@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             View loadingIndicator = findViewById(R.id.progression);
             loadingIndicator.setVisibility(View.GONE);
 
-            mEmptyStateImageView.setImageResource(R.drawable.ic_launcher_foreground);
+            mEmptyStateImageView.setImageResource(R.drawable.ic_domain);
             mEmptyStateTextView.setText(R.string.no_internet_connection);
         }
     }
@@ -128,10 +128,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
             mEmptyStateTextView.setText(R.string.no_news);
-            mEmptyStateImageView.setImageResource(R.drawable.ic_launcher_foreground);
+            mEmptyStateImageView.setImageResource(R.drawable.ic_news);
 
         } else {
-            mEmptyStateImageView.setImageResource(R.drawable.ic_launcher_background);
+            mEmptyStateImageView.setImageResource(R.drawable.ic_domain);
             mEmptyStateTextView.setText(R.string.no_internet_connection);
         }
         mAdapter.clear();
