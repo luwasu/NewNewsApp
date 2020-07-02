@@ -15,6 +15,7 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
     }
+
     public static class NewsPreferenceFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener {
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -31,8 +32,8 @@ public class SettingsActivity extends AppCompatActivity {
         private void bindPreferenceSummaryToValue(Preference preference) {
             preference.setOnPreferenceChangeListener(this);
             SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(preference.getContext());
-            String preferenceString = sharedPreferences.getString(preference.getKey(),"");
-            onPreferenceChange(preference,preferenceString);
+            String preferenceString = sharedPreferences.getString(preference.getKey(), "");
+            onPreferenceChange(preference, preferenceString);
         }
 
         @Override
@@ -40,9 +41,9 @@ public class SettingsActivity extends AppCompatActivity {
             // The code in this method takes care of updating the displayed preference summary after being changed
             String stringValue = newValue.toString();
             if (preference instanceof ListPreference) {
-                ListPreference listPreference = (ListPreference)preference;
+                ListPreference listPreference = (ListPreference) preference;
                 int prefIndex = listPreference.findIndexOfValue(stringValue);
-                if (prefIndex>=0) {
+                if (prefIndex >= 0) {
                     CharSequence[] labels = listPreference.getEntries();
                     preference.setSummary(labels[prefIndex]);
                 }

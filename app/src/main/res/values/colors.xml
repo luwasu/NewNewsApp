@@ -3,8 +3,6 @@
     <color name="colorPrimary">#450060</color>
     <color name="colorPrimaryDark">#8b1284</color>
     <color name="colorAccent">#c589bf</color>
-
     <color name="textColorNewsSection">#90CAF9</color>
-
     <color name="textColorNewsTitle">#880E4F</color>
 </resources>
